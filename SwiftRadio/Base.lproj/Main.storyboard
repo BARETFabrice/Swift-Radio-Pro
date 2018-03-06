@@ -518,10 +518,10 @@
             </objects>
             <point key="canvasLocation" x="727.5" y="428.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Connection View Controller-->
         <scene sceneID="pgQ-3u-NBc">
             <objects>
-                <viewController id="qct-tm-5Fs" sceneMemberID="viewController">
+                <viewController id="qct-tm-5Fs" customClass="ConnectionViewController" customModule="SwiftRadio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n1I-6P-Wsd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -563,6 +563,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jjm-dL-j6a"/>
                     </view>
+                    <connections>
+                        <outlet property="btnConnextion" destination="fyE-A8-2ih" id="aN0-fr-3xS"/>
+                        <outlet property="login" destination="Nkg-Xq-C1I" id="42U-qt-Ljz"/>
+                        <outlet property="password" destination="May-qE-6xf" id="EtV-7b-9OO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hd5-ds-zGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
