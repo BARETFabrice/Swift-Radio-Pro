@@ -544,10 +544,14 @@
                                 <rect key="frame" x="148" y="617" width="79" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Connection"/>
+                                <connections>
+                                    <action selector="actionSurBtnConnectionWithSender:" destination="qct-tm-5Fs" eventType="touchUpInside" id="mnQ-Z0-GdS"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nkg-Xq-C1I">
                                 <rect key="frame" x="111" y="81" width="248" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.42531283832230621" green="0.87058775906735753" blue="0.65256987140125089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -555,6 +559,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="May-qE-6xf">
                                 <rect key="frame" x="111" y="134" width="248" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.42531283832230621" green="0.87058775906735753" blue="0.65256987140125089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -564,7 +569,6 @@
                         <viewLayoutGuide key="safeArea" id="jjm-dL-j6a"/>
                     </view>
                     <connections>
-                        <outlet property="btnConnextion" destination="fyE-A8-2ih" id="aN0-fr-3xS"/>
                         <outlet property="login" destination="Nkg-Xq-C1I" id="42U-qt-Ljz"/>
                         <outlet property="password" destination="May-qE-6xf" id="EtV-7b-9OO"/>
                     </connections>
