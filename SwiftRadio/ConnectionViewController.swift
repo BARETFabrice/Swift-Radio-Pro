@@ -21,19 +21,18 @@ class ConnectionViewController: UIViewController {
         super.didReceiveMemoryWarning();
     }
     
-    @IBAction func actionSurBtnConnection(sender : UIButton)
-    {
+    @IBAction func actionSurBtnConnection(_ sender: UIButton) {
         var loginEnter : Bool
         var passwordEnter : Bool
         
-        if let resultatLogin = login.text, resultatLogin != "" {
+        if(login.text != "") {
             loginEnter = true;
         }
         else {
             loginEnter = false;
         }
         
-        if let resultatPassword = password.text, resultatPassword != "" {
+        if(password.text != "") {
             passwordEnter = true;
         }
         else {
@@ -45,7 +44,7 @@ class ConnectionViewController: UIViewController {
         }
         else {
             if isCantConnexion() {
-                afficherPanneauListeStation()
+                performSegue(withIdentifier: "radio", sender: self)
             }
         }
     }
@@ -64,12 +63,6 @@ class ConnectionViewController: UIViewController {
         }
         
         return condition;
-    }
-    
-    func afficherPanneauListeStation()
-    {
-        
-        alert(title: "OK", message: "Connextion")
     }
     
     func alert(title: String, message: String) {

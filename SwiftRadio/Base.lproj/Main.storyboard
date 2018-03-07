@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qct-tm-5Fs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kdl-ej-Zz5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -545,7 +545,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Connection"/>
                                 <connections>
-                                    <action selector="actionSurBtnConnectionWithSender:" destination="qct-tm-5Fs" eventType="touchUpInside" id="mnQ-Z0-GdS"/>
+                                    <action selector="actionSurBtnConnection:" destination="qct-tm-5Fs" eventType="touchUpInside" id="Olo-9F-7wp"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nkg-Xq-C1I">
@@ -568,14 +568,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jjm-dL-j6a"/>
                     </view>
+                    <navigationItem key="navigationItem" id="GKJ-Uj-jTC"/>
                     <connections>
                         <outlet property="login" destination="Nkg-Xq-C1I" id="42U-qt-Ljz"/>
                         <outlet property="password" destination="May-qE-6xf" id="EtV-7b-9OO"/>
+                        <segue destination="enP-TM-Wa7" kind="push" identifier="radio" id="jM8-i1-vZ0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hd5-ds-zGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-762" y="429"/>
+            <point key="canvasLocation" x="-234" y="297"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cxZ-Cy-z6Q">
@@ -596,12 +598,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="enP-TM-Wa7" kind="relationship" relationship="rootViewController" id="209-h1-nYu"/>
+                        <segue destination="qct-tm-5Fs" kind="relationship" relationship="rootViewController" id="eKc-Dn-9hs"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQK-JQ-AqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-311" y="429"/>
+            <point key="canvasLocation" x="-749" y="297"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="abW-KU-RWK">
@@ -851,6 +853,6 @@
         <image name="vol-min" width="11" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2md-Am-VN1"/>
+        <segue reference="Z22-bU-Ytg"/>
     </inferredMetricsTieBreakers>
 </document>
