@@ -24,20 +24,13 @@ class SwiftRadioUITests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
-        // wait for the main view to load
+        
         self.expectation(
             for: NSPredicate(format: "self.count > 0"),
             evaluatedWith: stations,
             handler: nil)
-        
-        
         
         labelLogin.tap()
         labelLogin.typeText("fabrice")
@@ -46,12 +39,9 @@ class SwiftRadioUITests: XCTestCase {
         btnConnextion.tap()
         
         self.waitForExpectations(timeout: 10.0, handler: nil)
-        
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
@@ -73,14 +63,10 @@ class SwiftRadioUITests: XCTestCase {
     }
     
     func assertPaused() {
-        //XCTAssertFalse(pauseButton.isEnabled)
-        //XCTAssertTrue(playButton.isEnabled)
         XCTAssertTrue(app.staticTexts["Station Paused..."].exists);
     }
     
     func assertPlaying() {
-        //XCTAssertTrue(pauseButton.isEnabled)
-        //XCTAssertFalse(playButton.isEnabled)
         XCTAssertFalse(app.staticTexts["Station Paused..."].exists);
     }
     
@@ -103,9 +89,6 @@ class SwiftRadioUITests: XCTestCase {
     }
     
     func testMainStationsView() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
         assertStationsPresent()
         
         hamburgerMenu.tap()
@@ -117,6 +100,7 @@ class SwiftRadioUITests: XCTestCase {
         assertStationsPresent()
         
         let firstStation = stations.element(boundBy: 0)
+        let stationName:String = firstStation.children(matching: .staticText).element(boundBy: 1).label
         
         firstStation.tap()
         waitForStationToLoad();
@@ -136,7 +120,7 @@ class SwiftRadioUITests: XCTestCase {
         assertPaused()
         playButton.tap()
         assertPlaying()
-        app.navigationBars["Absolute Country Hits"].buttons["Back"].tap()
+        app.navigationBars[stationName].buttons["Back"].tap()
         app.navigationBars["Swift Radio"].buttons["btn nowPlaying"].tap()
     }
     
