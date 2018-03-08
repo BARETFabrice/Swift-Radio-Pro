@@ -139,7 +139,7 @@
                         <viewLayoutGuide key="safeArea" id="Rf9-Sj-GRF"/>
                     </view>
                     <navigationItem key="navigationItem" title="Swift Radio" id="OKR-cw-CyI">
-                        <barButtonItem key="leftBarButtonItem" image="icon-hamburger" id="CEi-nw-1dN">
+                        <barButtonItem key="leftBarButtonItem" title="icon hamburger" image="icon-hamburger" id="CEi-nw-1dN">
                             <connections>
                                 <segue destination="61j-j7-6ve" kind="modal" identifier="ShowMenu" id="MJP-ZO-92b"/>
                             </connections>
@@ -318,6 +318,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7t-tN-2wp" userLabel="PauseButton">
                                         <rect key="frame" x="57" y="0.0" width="45" height="45"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="btn pause"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="0QP-4Y-L0R"/>
                                             <constraint firstAttribute="height" constant="45" id="9ls-Nq-FcF"/>
@@ -499,7 +500,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aXI-gd-81R"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SubPop Records" id="M1Z-0o-hNV" userLabel="Station Title"/>
+                    <navigationItem key="navigationItem" title="Station Title" id="M1Z-0o-hNV" userLabel="Station Title"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="albumHeightConstraint" destination="hCD-tK-vVP" id="VlU-n5-VPe"/>
@@ -526,14 +527,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-Kr-lnL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-Kr-lnL" userLabel="labelLogin">
                                 <rect key="frame" x="16" y="86" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSt-CS-BbI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSt-CS-BbI" userLabel="labelPassword">
                                 <rect key="frame" x="16" y="139" width="74" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -552,6 +553,7 @@
                                 <rect key="frame" x="111" y="81" width="248" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.42531283832230621" green="0.87058775906735753" blue="0.65256987140125089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Login"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -560,6 +562,7 @@
                                 <rect key="frame" x="111" y="134" width="248" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.42531283832230621" green="0.87058775906735753" blue="0.65256987140125089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Password"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -577,7 +580,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hd5-ds-zGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234" y="297"/>
+            <point key="canvasLocation" x="-234.5" y="296.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cxZ-Cy-z6Q">
